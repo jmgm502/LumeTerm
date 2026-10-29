@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH được xác thực nhưng phản hồi chậm khi mở kênh đầu cuối. Máy chủ có thể đang khôi phục hoặc đang chịu tải nặng.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Vẫn đang chờ, nó sẽ tự động ngắt kết nối sau khi tổng thời gian chờ đạt 30 giây.",
   "服务器别名（选填）": "Bí danh máy chủ (tùy chọn)",
+  "到期时间": "Ngày hết hạn",
   "例如：我的测试服": "Ví dụ: máy chủ thử nghiệm của tôi",
   "主机地址 *": "Địa chỉ máy chủ *",
   "用户名": "tên người dùng",

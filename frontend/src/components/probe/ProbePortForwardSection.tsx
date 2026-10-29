@@ -158,7 +158,7 @@ export function PortForwardSection({
                 <div className="flex items-center gap-1.5 min-w-0 flex-1">
                   <span
                     className={cn(
-                      'shrink-0 w-[15px] h-[15px] inline-flex items-center justify-center rounded-xs text-[9px] font-bold font-mono leading-none',
+                      'shrink-0 w-[15px] h-[15px] inline-flex items-center justify-center rounded-xs text-[9.5px] font-bold font-mono leading-none',
                       isLocal
                         ? 'bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] text-accent'
                         : 'bg-[color-mix(in_srgb,var(--success)_16%,transparent)] text-success',
@@ -172,7 +172,7 @@ export function PortForwardSection({
                         {renderCompactLabel(info)}
                       </Tiptop>
                       {stopped && (
-                        <span className="shrink-0 text-[10px] px-1.5 py-[1px] rounded-full bg-[color-mix(in_srgb,var(--text-tertiary)_18%,transparent)] text-tertiary">{t('已停止')}</span>
+                        <span className="shrink-0 text-[11px] px-1.5 py-[1px] rounded-full bg-[color-mix(in_srgb,var(--text-tertiary)_18%,transparent)] text-tertiary">{t('已停止')}</span>
                       )}
                     </div>
                   </div>

@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH è autenticato, ma la risposta è lenta quando si apre un canale terminale. Il server potrebbe essere in fase di ripristino o sottoposto a un carico pesante.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Ancora in attesa, si disconnetterà automaticamente quando il tempo di attesa totale raggiunge i 30 secondi.",
   "服务器别名（选填）": "Alias ​​del server (facoltativo)",
+  "到期时间": "Data di scadenza",
   "例如：我的测试服": "Ad esempio: il mio server di prova",
   "主机地址 *": "Indirizzo dell'ospite *",
   "用户名": "nome utente",

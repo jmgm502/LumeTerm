@@ -90,6 +90,18 @@ export function AddServerBasicSection({
           </div>
         </div>
         <div className="form-group">
+          <label className="form-label" htmlFor="server-expiration-date">{t('到期时间')}</label>
+          <input
+            id="server-expiration-date"
+            name="expirationDate"
+            type="date"
+            className={inputClass('expirationDate')}
+            data-editor-field="expirationDate"
+            value={form.expirationDate || ''}
+            onChange={set('expirationDate')}
+          />
+        </div>
+        <div className="form-group">
           <label className="form-label" htmlFor="server-group">{t('分组')}</label>
           <input
             id="server-group"

@@ -34,19 +34,19 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
         <div style={{
           display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
           height: '100%', padding: 24, color: 'var(--danger)', background: 'var(--surface-overlay)',
-          fontFamily: 'system-ui, sans-serif', fontSize: 13,
+          fontFamily: 'system-ui, sans-serif', fontSize: 14,
         }}>
           <div className="font-semibold" style={{ marginBottom: 8 }}>
             {label || t('组件渲染出错')}
           </div>
-          <div style={{ color: 'var(--text-secondary)', fontSize: 12, marginBottom: 12, textAlign: 'center', maxWidth: 400 }}>
+          <div style={{ color: 'var(--text-secondary)', fontSize: 13, marginBottom: 12, textAlign: 'center', maxWidth: 400 }}>
             {this.state.error?.message || t('未知错误')}
           </div>
           <button
             onClick={() => this.setState({ hasError: false, error: null })}
             style={{
               padding: '4px 16px', border: '1px solid var(--border)', borderRadius: 4,
-              background: 'transparent', color: 'var(--text-primary)', cursor: 'pointer', fontSize: 12,
+              background: 'transparent', color: 'var(--text-primary)', cursor: 'pointer', fontSize: 13,
             }}
           >
             {t('重试')}

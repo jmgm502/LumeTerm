@@ -225,7 +225,7 @@ export default function AIChatFollowUpCard({ question, questions, suggestions, r
           <MessageCircleQuestionMark size={13} />
           <span>{t('追问建议')}</span>
         </div>
-        <div className="text-[18px] font-bold leading-[1.4] text-primary">
+        <div className="text-[19.5px] font-bold leading-[1.4] text-primary">
           <AIChatMarkdown text={currentQuestion.text || ''} />
         </div>
       </div>

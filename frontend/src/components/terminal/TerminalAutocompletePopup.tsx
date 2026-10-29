@@ -73,7 +73,7 @@ export function TerminalAutocompletePopup({
                 >
                   {item.label}
                 </span>
-                <span className="shrink-0 px-1.5 py-0.5 rounded-full border border-[var(--term-btn-border)] text-[var(--term-status-color)] text-[10px] leading-[1.2]">
+                <span className="shrink-0 px-1.5 py-0.5 rounded-full border border-[var(--term-btn-border)] text-[var(--term-status-color)] text-[11px] leading-[1.2]">
                   {item.badge}
                 </span>
               </div>

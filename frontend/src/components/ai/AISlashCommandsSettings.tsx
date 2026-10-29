@@ -166,7 +166,7 @@ export default function AISlashCommandsSettings({ slashCommands, onSaveGlobalAIS
   return (
     <div className="grid gap-0">
       <div className="grid gap-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('斜杠命令')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('斜杠命令')}</div>
         <div className="text-sm text-tertiary leading-[1.6]">
           {t('输入框与用户消息只显示')} <code>{t('斜杠命令占位符')}</code>{t('真正发送给 AI 时,会在后台注入命令完整提示词内容.')}
         </div>

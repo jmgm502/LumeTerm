@@ -33,7 +33,7 @@ export default function ProviderCard({ provider, providerKey, form, configured, 
       <div data-settings-field-id={definition?.id} className="flex items-center gap-3 mb-5">
         <div className="w-10 h-10 rounded-lg bg-sunken flex items-center justify-center text-secondary">{IC ? <IC size={20} /> : null}</div>
         <div>
-          <div className="text-[16px] font-semibold text-primary">{$t(provider.titleKey)}</div>
+          <div className="text-[17.5px] font-semibold text-primary">{$t(provider.titleKey)}</div>
           <div className="text-sm text-tertiary">{$t(provider.subtitleKey)}</div>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function ProviderCard({ provider, providerKey, form, configured, 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="w-2.5 h-2.5 rounded-full" style={{ background: accent }}></div>
-              <div className="text-[16px] font-bold text-primary tracking-[0.3px]">{$t(provider.successMsgKey)}</div>
+              <div className="text-[17.5px] font-bold text-primary tracking-[0.3px]">{$t(provider.successMsgKey)}</div>
             </div>
             <button onClick={onEdit} className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-sm text-base font-medium bg-hover border border-line text-secondary cursor-pointer transition-colors duration-[200ms] hover:bg-sunken hover:text-primary">
               <Pencil size={14} />

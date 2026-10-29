@@ -136,7 +136,7 @@ export default function MCPServersView({
   return (
     <div className="grid gap-3.5">
       <div className="grid gap-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('MCP服务器')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('MCP服务器')}</div>
         <div className="text-sm text-tertiary leading-[1.6]">{t('这里直接配置完整的 MCP Json 文件；内置服务器只读，外置服务器可通过下方完整配置统一维护。')}</div>
         {globalConfigPath ? (
           <div className="text-xs text-muted leading-[1.5] break-all">

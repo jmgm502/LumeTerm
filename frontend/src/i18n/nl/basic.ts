@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH is geverifieerd, maar de reactie is traag bij het openen van een terminalkanaal. De server is mogelijk bezig met herstellen of wordt zwaar belast.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Er wordt nog steeds gewacht, maar de verbinding wordt automatisch verbroken nadat de totale wachttijd 30 seconden heeft bereikt.",
   "服务器别名（选填）": "Serveralias (optioneel)",
+  "到期时间": "Vervaldatum",
   "例如：我的测试服": "Bijvoorbeeld: mijn testserver",
   "主机地址 *": "Hostadres *",
   "用户名": "gebruikersnaam",

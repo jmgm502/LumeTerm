@@ -110,7 +110,7 @@ export function NetworkOverviewCards({
           <span>{t('总下载')}</span>
         </div>
         {interfaces.length > 0 ? interfaces.map((item) => (
-          <div key={item.name} className="grid grid-cols-[1.2fr_1fr_1fr_1fr_1fr] gap-2.5 py-[9px] px-3 border-b border-line-subtle items-center text-[12.5px]">
+          <div key={item.name} className="grid grid-cols-[1.2fr_1fr_1fr_1fr_1fr] gap-2.5 py-[9px] px-3 border-b border-line-subtle items-center text-[13.5px]">
             <span className="text-primary font-mono font-bold">{item.name}</span>
             <span className="text-success font-mono">{formatRate(item.uploadSpeed || 0)}</span>
             <span className="text-accent font-mono">{formatRate(item.downloadSpeed || 0)}</span>

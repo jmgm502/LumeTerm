@@ -1845,7 +1845,7 @@ function GitRepositoryPanel({
                           <span role="button" tabIndex={0} className="git-repository-copy-button" onClick={(event) => { event.stopPropagation(); if (!controlsDisabled) void handleCopy(log.hash); }}><Clipboard size={12} /></span>
                         </Tiptop>
                       </button>
-                      <div className="truncate px-2 pb-1 text-[10px] text-tertiary">{log.author} · {log.date}</div>
+                      <div className="truncate px-2 pb-1 text-[11px] text-tertiary">{log.author} · {log.date}</div>
                       {state.expandedLogHash === log.hash ? (
                         <div className="git-repository-log-files">
                           {log.files.map((file) => <div key={`${log.hash}-${file.file}`}><span className={getStatusClass(file.status)}>{getPrimaryStatus(file.status)}</span><span className="truncate">{file.file}</span></div>)}

@@ -73,7 +73,7 @@ export default function RuntimeEnvironmentTab() {
             </div>
             <div className="min-w-0 flex flex-col gap-2 flex-1">
               <div className="flex items-center gap-2.5 flex-wrap">
-                <div className="text-primary text-[26px] font-bold leading-none">uv</div>
+                <div className="text-primary text-[28px] font-bold leading-none">uv</div>
                 <div className="px-2.5 py-0.5 rounded-full border border-line text-secondary text-sm">{$t('内置')}</div>
                 <div className={cn('ml-auto inline-flex items-center gap-1.5 text-sm', ready ? 'text-accent' : 'text-secondary')}>
                   {ready ? <CheckCircle2 size={16} /> : <CircleOff size={16} />}

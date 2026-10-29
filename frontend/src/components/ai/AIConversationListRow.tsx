@@ -93,7 +93,7 @@ export function renderAIConversationListRow({
                       <span
                         aria-label={workspaceTabOccupation.label}
                         title={workspaceTabOccupation.label}
-                        className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[10px] font-semibold tabular-nums"
+                        className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[11px] font-semibold tabular-nums"
                       >
                         {workspaceTabOccupation.label}
                       </span>
@@ -125,7 +125,7 @@ export function renderAIConversationListRow({
                     </Tiptop>
                   ) : null}
                   {item.transient === true ? (
-                    <span title={t('临时会话')} className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[10px] font-semibold">
+                    <span title={t('临时会话')} className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[11px] font-semibold">
                       {t('临时会话')}
                     </span>
                   ) : null}
@@ -140,7 +140,7 @@ export function renderAIConversationListRow({
                     {historyTimeParts.relativeText ? (
                       <>
                         <span style={historyRelativeToneStyle}>{historyTimeParts.relativeText}</span>
-                        <span className="opacity-50 ml-1 text-[11px] font-mono">{historyTimeParts.absoluteText}</span>
+                        <span className="opacity-50 ml-1 text-[12px] font-mono">{historyTimeParts.absoluteText}</span>
                       </>
                     ) : (
                       <span>{historyTimeParts.absoluteText}</span>

@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH'nin kimliği doğrulandı ancak bir terminal kanalı açıldığında yanıt yavaş. Sunucu kurtarılıyor veya ağır yük altında olabilir.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Hala bekliyor, toplam bekleme süresi 30 saniyeye ulaştığında otomatik olarak bağlantı kesilecektir.",
   "服务器别名（选填）": "Sunucu takma adı (isteğe bağlı)",
+  "到期时间": "Bitiş tarihi",
   "例如：我的测试服": "Örneğin: test sunucum",
   "主机地址 *": "Ana bilgisayar adresi *",
   "用户名": "kullanıcı adı",

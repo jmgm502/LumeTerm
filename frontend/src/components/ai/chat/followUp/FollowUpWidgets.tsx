@@ -24,8 +24,8 @@ export const suggestionMarkdownComponents: Components = {
       {children}
     </span>
   ),
-  h1: ({ children }) => <span className="block text-[16px] font-bold leading-[1.4]">{children}</span>,
-  h2: ({ children }) => <span className="block text-[15px] font-bold leading-[1.45]">{children}</span>,
+  h1: ({ children }) => <span className="block text-[17.5px] font-bold leading-[1.4]">{children}</span>,
+  h2: ({ children }) => <span className="block text-[16px] font-bold leading-[1.45]">{children}</span>,
   h3: ({ children }) => <span className="block text-md font-bold leading-[1.5]">{children}</span>,
 };
 

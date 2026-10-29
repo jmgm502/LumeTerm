@@ -25,14 +25,14 @@ export function useThemePackages({ addToast, forceDarkTheme, handleClose }: UseT
   const [themePackageSettings, setThemePackageSettings] = useState(() => getStoredThemePackageSettings());
   const [themePackages, setThemePackages] = useState(() => listThemePackages());
   const [themePackageBusy, setThemePackageBusy] = useState(false);
-  const [themeMode, setThemeMode] = useState(getStoredThemePackageSettings().themeMode || 'dark');
+  const [themeMode, setThemeMode] = useState(getStoredThemePackageSettings().themeMode || 'light');
 
   const refreshThemePackages = useCallback(async () => {
     await loadThemePackages();
     const nextSettings = getStoredThemePackageSettings();
     setThemePackageSettings(nextSettings);
     setThemePackages(listThemePackages());
-    setThemeMode(nextSettings.themeMode || 'dark');
+    setThemeMode(nextSettings.themeMode || 'light');
   }, []);
 
   const handleThemeChange = async (mode: string) => {
@@ -49,7 +49,7 @@ export function useThemePackages({ addToast, forceDarkTheme, handleClose }: UseT
         }), null, themeTransitionDirectionFor(mode));
       setThemePackageSettings(nextSettings);
       setThemePackages(listThemePackages());
-      setThemeMode(nextSettings.themeMode || 'dark');
+      setThemeMode(nextSettings.themeMode || 'light');
     } catch (err) {
       addToast($t('主题包设置保存失败') + `: ${err}`, 'error');
     } finally {
@@ -71,7 +71,7 @@ export function useThemePackages({ addToast, forceDarkTheme, handleClose }: UseT
       });
       setThemePackageSettings(nextSettings);
       setThemePackages(listThemePackages());
-      setThemeMode(nextSettings.themeMode || 'dark');
+      setThemeMode(nextSettings.themeMode || 'light');
     } catch (err) {
       addToast($t('主题包设置保存失败') + `: ${err}`, 'error');
     } finally {
@@ -185,7 +185,7 @@ export function useThemePackages({ addToast, forceDarkTheme, handleClose }: UseT
       const nextSettings = getStoredThemePackageSettings();
       setThemePackageSettings(nextSettings);
       setThemePackages(listThemePackages());
-      setThemeMode(nextSettings.themeMode || 'dark');
+      setThemeMode(nextSettings.themeMode || 'light');
     };
     window.addEventListener('theme-package-changed', handleThemeRuntimeChanged);
     window.addEventListener('theme-mode-changed', handleThemeRuntimeChanged);

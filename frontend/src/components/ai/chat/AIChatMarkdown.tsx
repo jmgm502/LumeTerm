@@ -219,8 +219,8 @@ const markdownComponents: Components = {
     </blockquote>
   ),
   h1: ({ children }) => <h1 className="mb-3 text-3xl leading-[1.35]">{children}</h1>,
-  h2: ({ children }) => <h2 className="mb-2.5 text-[18px] leading-[1.4]">{children}</h2>,
-  h3: ({ children }) => <h3 className="mb-2 text-[16px] leading-[1.45]">{children}</h3>,
+  h2: ({ children }) => <h2 className="mb-2.5 text-[19.5px] leading-[1.4]">{children}</h2>,
+  h3: ({ children }) => <h3 className="mb-2 text-[17.5px] leading-[1.45]">{children}</h3>,
   table: ({ children }) => (
     <div className="mb-3 overflow-x-auto">
       <table className="w-full border-collapse text-sm">{children}</table>

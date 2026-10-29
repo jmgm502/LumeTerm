@@ -97,7 +97,7 @@ export function ServerGroupHeader({
     return (
       <tr key={`__group_${groupName || 'ungrouped'}`}>
         <td
-          colSpan={6 + (selectionMode ? 1 : 0)}
+          colSpan={7 + (selectionMode ? 1 : 0)}
           onContextMenu={(e) => openGroupHeaderMenu(e, groupName)}
           className="px-2 pt-1.5 pb-0.5 text-sm text-secondary font-medium select-none"
         >

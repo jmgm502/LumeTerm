@@ -51,11 +51,11 @@ class ErrorBoundary extends React.Component<{ children?: React.ReactNode }, Erro
         }}>
           <div className="text-2xl"><AlertTriangle size={24} /></div>
           <div className="text-sm font-semibold">{t('界面渲染出错')}</div>
-          <div style={{ fontSize: 11, color: 'var(--text-secondary)', maxWidth: 500, wordBreak: 'break-all' }}>{msg}</div>
-          <pre style={{ fontSize: 10, color: 'var(--text-tertiary)', maxHeight: 200, overflow: 'auto', background: 'var(--surface-raised)', padding: 8, borderRadius: 4 }}>{stack}</pre>
+          <div style={{ fontSize: 12, color: 'var(--text-secondary)', maxWidth: 500, wordBreak: 'break-all' }}>{msg}</div>
+          <pre style={{ fontSize: 11, color: 'var(--text-tertiary)', maxHeight: 200, overflow: 'auto', background: 'var(--surface-raised)', padding: 8, borderRadius: 4 }}>{stack}</pre>
           <button onClick={() => { this.setState({ hasError: false, error: null }); window.location.reload(); }} style={{
             padding: '6px 16px', borderRadius: 6, border: '1px solid var(--danger)', background: 'var(--danger-dim)',
-            color: 'var(--danger)', cursor: 'pointer', fontSize: 13
+            color: 'var(--danger)', cursor: 'pointer', fontSize: 14
           }}>{t('重新加载')}</button>
         </div>
       );

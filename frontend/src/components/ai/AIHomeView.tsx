@@ -358,7 +358,7 @@ export function renderAIHomeView({
             ) : null}
             <div className="flex items-center gap-1.5">
               <div className="flex items-center gap-1 pl-1 pr-1.5 shrink-0 text-xs font-semibold text-primary">
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-accent text-white text-[11px] font-bold">
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-accent text-white text-[12px] font-bold">
                   {selectedConversationIds.size}
                 </span>
                 <span>{t('项')}</span>

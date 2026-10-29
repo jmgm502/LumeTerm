@@ -171,7 +171,7 @@ export function AddServerAuthSection({
                     className="input"
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: 12,
+                      fontSize: 13,
                       resize: 'vertical',
                       minHeight: 100,
                     }}

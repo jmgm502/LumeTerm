@@ -5,6 +5,7 @@ export interface ServerEditorForm {
   name: string;
   host: string;
   port: string;
+  expirationDate: string;
   username: string;
   authType: string;
   password: string;
@@ -39,6 +40,7 @@ export const defaultForm: ServerEditorForm = {
   name: '',
   host: '',
   port: '',
+  expirationDate: '',
   username: 'root',
   authType: 'password',
   password: '',

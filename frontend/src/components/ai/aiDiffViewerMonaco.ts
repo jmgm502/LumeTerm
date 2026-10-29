@@ -64,7 +64,7 @@ export const DIFF_EDITOR_BASE_OPTIONS: monaco.editor.IDiffEditorConstructionOpti
   wordWrap: 'off',
   renderWhitespace: 'selection',
   fontFamily: 'var(--font-mono)',
-  fontSize: 12,
+  fontSize: 13,
   lineHeight: 20,
   tabSize: 2,
   padding: { top: 8, bottom: 8 },

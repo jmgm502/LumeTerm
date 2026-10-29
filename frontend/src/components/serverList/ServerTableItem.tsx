@@ -4,6 +4,7 @@ import type { config } from '../../../wailsjs/go/models.ts';
 import type { ServerPingResult } from '../../hooks/useServerPing.ts';
 import { useTranslation } from '../../i18n.ts';
 import { cn } from '../../utils/cn.ts';
+import { isExpirationDateUrgent } from '../../utils/expirationDate.ts';
 import { Button } from '../ui';
 import { getOSInfo, LATENCY_CLASS } from './serverIcons.tsx';
 
@@ -59,6 +60,9 @@ export function ServerTableItem({
   const osInfo = getOSInfo(server.name, server.os, (sessionForServer?.osInfo as Record<string, unknown> | null | undefined) || null);
   const { rowToken, nameToken, hostToken, usernameToken } = getSaveFlowTokens(server);
   const isChecked = selectedSet.has(server.id);
+  const expirationClass = server.expirationDate
+    ? (isExpirationDateUrgent(server.expirationDate) ? 'text-danger' : 'text-secondary')
+    : 'text-tertiary';
 
   const handleTableRowClick = (e: React.MouseEvent) => {
     if (selectionMode) {
@@ -107,7 +111,7 @@ export function ServerTableItem({
         <span key={`name-${nameToken || 'stable'}`} className={cn('save-flow-target', Boolean(nameToken) && 'save-flow-target-active')}>
           {server.name || server.host}
         </span>
-        {connected && <span className="ml-1.5 text-[10px] text-success py-0.5 px-1.5 bg-success-dim rounded-full">{t('已连接')}</span>}
+        {connected && <span className="ml-1.5 text-[11px] text-success py-0.5 px-1.5 bg-success-dim rounded-full">{t('已连接')}</span>}
       </td>
       <td data-edit-source-field="hostPort" className="text-base text-secondary font-mono">
         <span key={`host-${hostToken || 'stable'}`} className={cn('save-flow-target', Boolean(hostToken) && 'save-flow-target-active')}>
@@ -119,6 +123,7 @@ export function ServerTableItem({
           {hideSensitive ? mask(server.username) : server.username}
         </span>
       </td>
+      <td className={cn('font-mono', expirationClass)}>{server.expirationDate || '-'}</td>
       <td>
         {ping?.online && ping?.latency !== undefined && ping?.latency !== null ? (
           <span className={cn(

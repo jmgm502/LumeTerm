@@ -40,7 +40,7 @@ export function AIProviderSummaryTooltip({
           <span className="shrink-0 text-xs text-tertiary whitespace-nowrap">
             {row.label}
           </span>
-          <span className="min-w-0 max-w-full text-[11.5px] text-primary leading-[1.45] [overflow-wrap:anywhere]">
+          <span className="min-w-0 max-w-full text-[12.5px] text-primary leading-[1.45] [overflow-wrap:anywhere]">
             {row.value}
           </span>
         </div>

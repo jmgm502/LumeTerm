@@ -134,7 +134,7 @@ export default function QuickEditWebSearchSection({
                 <span className="min-w-0 truncate">
                   {currentDedicatedProviderOption?.label || t('自身')}
                 </span>
-                <span className={`text-tertiary text-[10px] ${dedicatedProviderMenuOpen ? 'rotate-180' : 'rotate-0'}`}>▾</span>
+                <span className={`text-tertiary text-[11px] ${dedicatedProviderMenuOpen ? 'rotate-180' : 'rotate-0'}`}>▾</span>
               </button>
               {dedicatedProviderMenuOpen && draft.webSearchEnabled ? (
                 <div
@@ -196,7 +196,7 @@ export default function QuickEditWebSearchSection({
                 <span className="min-w-0 truncate">
                   {currentDedicatedProxyOption?.label || t('不使用')}
                 </span>
-                <span className={`text-tertiary text-[10px] ${proxyMenuOpen ? 'rotate-180' : 'rotate-0'}`}>▾</span>
+                <span className={`text-tertiary text-[11px] ${proxyMenuOpen ? 'rotate-180' : 'rotate-0'}`}>▾</span>
               </button>
               {proxyMenuOpen ? (
                 <div

@@ -57,6 +57,32 @@ func TestPlaintextEncryptDecryptCompat(t *testing.T) {
 	}
 }
 
+func TestConnectionExpirationDate(t *testing.T) {
+	cm := testConfigManagerForGroup(t)
+	conn := cm.SaveConnection(Connection{Host: "example.com", Port: 22, Username: "root", ExpirationDate: "2027-03-14"}, true)
+	if conn.ID == "" {
+		t.Fatal("expected saved connection ID")
+	}
+
+	cm.connCacheDirty = true
+	got, ok := cm.GetConnectionByID(conn.ID)
+	if !ok || got.ExpirationDate != "2027-03-14" {
+		t.Fatalf("expiration date not persisted: %+v, found=%v", got, ok)
+	}
+
+	got.Name = "renamed"
+	cm.SaveConnection(got, true)
+	if updated, found := cm.GetConnectionByID(conn.ID); !found || updated.ExpirationDate != "2027-03-14" {
+		t.Fatalf("expiration date lost on edit: %+v, found=%v", updated, found)
+	}
+
+	got.ExpirationDate = ""
+	cm.SaveConnection(got, true)
+	if cleared, found := cm.GetConnectionByID(conn.ID); !found || cleared.ExpirationDate != "" {
+		t.Fatalf("expiration date not cleared: %+v, found=%v", cleared, found)
+	}
+}
+
 func TestRenameConnectionGroup_Success(t *testing.T) {
 	cm := testConfigManagerForGroup(t)
 	cm.mu.Lock()

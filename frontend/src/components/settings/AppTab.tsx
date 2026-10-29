@@ -138,7 +138,7 @@ export default function AppTab({ CURRENT_VERSION, BUILD_TIME, updateInfo, checki
           />
         </div>
         <div className="flex flex-col gap-1.5">
-          <div className="text-[32px] font-extrabold text-primary tracking-[-0.5px] flex items-baseline gap-2">
+          <div className="text-[34.5px] font-extrabold text-primary tracking-[-0.5px] flex items-baseline gap-2">
             LumeTerm
             <span className="text-md font-medium text-tertiary tracking-normal">by WuMing</span>
           </div>
@@ -255,7 +255,7 @@ export default function AppTab({ CURRENT_VERSION, BUILD_TIME, updateInfo, checki
       </div>
 
       <div data-settings-field-id={appSettings.fields.contributors.id} className="flex flex-col gap-4 mt-2">
-        <div className="text-[18px] font-bold text-primary">
+        <div className="text-[19.5px] font-bold text-primary">
           {$t('特别鸣谢')}
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-3.5 p-[18px] rounded-lg border border-line bg-canvas content-start max-h-[min(420px,48vh)] overflow-y-auto overflow-x-hidden">
@@ -286,7 +286,7 @@ export default function AppTab({ CURRENT_VERSION, BUILD_TIME, updateInfo, checki
                     className="w-16 h-16 rounded-full object-cover border border-line-light shadow-xs shrink-0"
                   />
                   <div className="flex flex-col gap-1.5 min-w-0 flex-1">
-                    <div className="text-[16px] font-bold text-primary leading-[1.3] break-words">
+                    <div className="text-[17.5px] font-bold text-primary leading-[1.3] break-words">
                       {item.login}
                     </div>
                     <div className="inline-flex items-center gap-1.5 text-base text-tertiary font-mono">

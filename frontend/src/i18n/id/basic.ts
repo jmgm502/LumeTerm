@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH diautentikasi, tetapi responsnya lambat saat membuka saluran terminal. Server mungkin sedang dalam masa pemulihan atau sedang dalam beban berat.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Masih menunggu, maka secara otomatis akan terputus setelah total waktu tunggu mencapai 30 detik.",
   "服务器别名（选填）": "Alias ​​server (opsional)",
+  "到期时间": "Tanggal kedaluwarsa",
   "例如：我的测试服": "Misalnya: server pengujian saya",
   "主机地址 *": "Alamat tuan rumah *",
   "用户名": "nama belakang",

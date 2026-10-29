@@ -60,7 +60,7 @@ export default function QuickEditModelSection({
           </span>
           <div className="min-w-0 grid gap-0.5">
             <div className="text-xs font-bold leading-[1.3]">{t('刷新模型失败')}</div>
-            <div className="text-secondary font-mono text-[10px] leading-[1.45] [overflow-wrap:anywhere] select-text">
+            <div className="text-secondary font-mono text-[11px] leading-[1.45] [overflow-wrap:anywhere] select-text">
               {modelRefreshError}
             </div>
           </div>

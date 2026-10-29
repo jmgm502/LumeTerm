@@ -221,7 +221,7 @@ export default function NetworkTab({ pingEnabled, onTogglePingEnabled, pingMode,
         <div className="text-sm text-secondary mb-2.5">{$t('选择延迟检测的探测方式，不同方式适用于不同网络环境。')}</div>
         <SettingsPanel data-settings-field-id={settingsData.fields.detectionMode.id} className="flex flex-col gap-2">
           {[
-            { id: 'auto', label: <><span className="text-[10px] bg-accent-dim border border-accent-border text-accent px-1.5 py-px rounded-sm font-bold mr-1.5">{$t('推荐')}</span>{$t('智能检测')}</>, desc: $t('直连用 TCP 测延迟；检测到代理/TUN 时低频 Banner 确认可达性，避免 Clash 等环境下不可达主机显示 0 毫秒在线') },
+            { id: 'auto', label: <><span className="text-[11px] bg-accent-dim border border-accent-border text-accent px-1.5 py-px rounded-sm font-bold mr-1.5">{$t('推荐')}</span>{$t('智能检测')}</>, desc: $t('直连用 TCP 测延迟；检测到代理/TUN 时低频 Banner 确认可达性，避免 Clash 等环境下不可达主机显示 0 毫秒在线') },
             { id: 'banner', label: $t('SSH Banner RTT'), desc: $t('所有连接都读取 SSH 握手响应测速，准确反映真实可达性，能穿透 TUN/代理；选择后会自动将延迟检测间隔调整为至少 15 秒') },
             { id: 'tcp', label: $t('TCP Dial'), desc: $t('仅检测 TCP 端口连通性，速度最快，但在 TUN/代理下可能把不可达服务器误判为在线') },
           ].map((opt) => (

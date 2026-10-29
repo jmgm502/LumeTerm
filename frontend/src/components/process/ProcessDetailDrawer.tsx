@@ -163,7 +163,7 @@ export function ProcessDetailDrawer({
           ) : null}
           <div className="mt-3">
             <div className="text-sm text-tertiary mb-1">{t('完整命令行')}:</div>
-            <div className="text-[12.5px] font-mono text-primary bg-canvas px-2.5 py-2 rounded-md break-all border border-line-light">
+            <div className="text-[13.5px] font-mono text-primary bg-canvas px-2.5 py-2 rounded-md break-all border border-line-light">
               {activeProcess?.cmd || activeProcess?.name}
             </div>
           </div>

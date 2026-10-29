@@ -27,3 +27,30 @@
 @import "./styles/components/bigscreen.css";
 @import "./styles/components/filemanager.css";
 @import "./styles/components/terminal.css";
+
+/* Borderless visual system: surfaces, spacing, and shadows carry hierarchy. */
+:where(*, *::before, *::after) {
+  border-color: transparent !important;
+}
+
+/* Explicit separator elements should not leave 1px rules behind. */
+:where(
+  hr,
+  .divider,
+  .window-divider,
+  .context-menu-divider,
+  .tab-item:not(.active)::after,
+  .tab-item.active::before,
+  .tab-item.active::after,
+  .topbar-home-btn:not(.active)::after,
+  .terminal-sub-tab::after,
+  .terminal-sub-tab.active::before,
+  .terminal-sub-tab.active::after,
+  .drawer-detail-tab::after,
+  .drawer-detail-tab.active::before,
+  .drawer-detail-tab.active::after,
+  .probe-tab-button.active::after,
+  .probe-extension-subtab.active::after
+) {
+  display: none !important;
+}

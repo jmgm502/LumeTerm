@@ -263,7 +263,7 @@ export default function CredentialsModal({ onClose, onChange, addToast }: Creden
                     value={form.privateKey}
                     onChange={set('privateKey')}
                     placeholder={isEditing ? t('留空不修改') : '-----BEGIN RSA PRIVATE KEY-----...'}
-                    style={{ fontSize: 12 }}
+                    style={{ fontSize: 13 }}
                   />
                 </div>
                 <div className="form-group">

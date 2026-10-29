@@ -43,15 +43,15 @@ export function DashboardStatusOverview({
         )}
       </div>
       <div className="stats-grid">
-        <div className="stat-item">
+        <div className="stat-item stat-item-total">
           <div className="stat-val">{servers.length}</div>
           <div className="stat-lbl">{t('服务器总数')}</div>
         </div>
-        <div className="stat-item">
+        <div className="stat-item stat-item-online">
           <div className="stat-val" style={{ color: 'var(--success)' }}>{pingEnabled ? pingCounts.online : '—'}</div>
           <div className="stat-lbl">{t('在线节点')}</div>
         </div>
-        <div className="stat-item">
+        <div className="stat-item stat-item-offline">
           <div className="stat-val" style={{ color: 'var(--danger)' }}>{pingEnabled ? pingCounts.offline : '—'}</div>
           <div className="stat-lbl">{t('离线节点')}</div>
         </div>

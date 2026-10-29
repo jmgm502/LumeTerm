@@ -181,7 +181,7 @@ export function renderAIWorkspaceTabBar({
                   <span className="text-muted tabular-nums shrink-0">{index + 1}</span>
                   {workspaceTabNumbersOnly ? null : <span className="min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">{tabTitle}</span>}
                   {!workspaceTabNumbersOnly && transient ? (
-                    <span title={t('临时会话')} className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[10px] font-semibold">
+                    <span title={t('临时会话')} className="shrink-0 px-[5px] py-px rounded-sm bg-[rgba(var(--accent-rgb),0.12)] text-accent text-[11px] font-semibold">
                       {t('临时会话')}
                     </span>
                   ) : null}

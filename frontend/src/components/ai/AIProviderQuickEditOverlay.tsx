@@ -141,7 +141,7 @@ export default function AIProviderQuickEditOverlay({
               <ArrowLeft size={16} />
             </button>
             <div className="min-w-0 grid gap-0">
-              <div className="text-[16px] font-bold text-primary leading-[1.2] whitespace-nowrap overflow-hidden text-ellipsis">{title}</div>
+              <div className="text-[17.5px] font-bold text-primary leading-[1.2] whitespace-nowrap overflow-hidden text-ellipsis">{title}</div>
               <div className="text-sm text-tertiary leading-[1.2]">{subtitle}</div>
             </div>
           </div>

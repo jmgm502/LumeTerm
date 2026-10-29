@@ -148,7 +148,7 @@ export function NetworkConnectionTable({
                 onClick={() => onOpenConnectionDetail(item, key)}
                 style={{ gridTemplateColumns: connectionTableColumns, minWidth: connectionTableMinWidth }}
                 className={cn(
-                  'grid gap-0 border-b border-line-subtle items-center text-[12.5px] tabular-nums',
+                  'grid gap-0 border-b border-line-subtle items-center text-[13.5px] tabular-nums',
                   peers.length > 0 ? 'cursor-pointer' : 'cursor-not-allowed opacity-[0.72]',
                   active && 'bg-active',
                 )}

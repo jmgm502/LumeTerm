@@ -25,7 +25,7 @@ export function getFreshContributorsCache(): Contributor[] | null {
 }
 
 export function getResolvedThemeMode(): 'light' | 'dark' {
-  const savedTheme = localStorage.getItem('themeMode') || 'dark';
+  const savedTheme = localStorage.getItem('themeMode') || 'light';
   if (savedTheme === 'system') {
     return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   }

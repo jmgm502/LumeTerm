@@ -163,7 +163,7 @@
 .terminal-tab-list-search input {
   width: 100%;
   padding: 4px 8px 4px 26px;
-  font-size: 12px;
+  font-size: 13px;
   background: var(--surface-sunken);
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -215,7 +215,7 @@
 
 .terminal-tab-list-empty {
   padding: 12px 16px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-tertiary);
   text-align: center;
 }

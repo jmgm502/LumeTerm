@@ -50,14 +50,14 @@
 
 /* ── Tailwind 静态刻度：对齐设计 token（字号/圆角/阴影/字体）── */
 @theme {
-  --text-xs: 11px;
-  --text-sm: 12px;
-  --text-base: 13px;
-  --text-md: 14px;
-  --text-lg: 15px;
-  --text-xl: 17px;
-  --text-2xl: 20px;
-  --text-3xl: 22px;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 22px;
+  --text-3xl: 24px;
 
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -220,14 +220,14 @@ svg[class*="lucide"] {
   --space-10: 40px;
 
   /* ── 字号 Token ── */
-  --text-xs:    11px;
-  --text-sm:    12px;
-  --text-base:  13px;
-  --text-md:    14px;
-  --text-lg:    15px;
-  --text-xl:    17px;
-  --text-2xl:   20px;
-  --text-3xl:   22px;
+  --text-xs:    12px;
+  --text-sm:    13px;
+  --text-base:  14px;
+  --text-md:    15px;
+  --text-lg:    16px;
+  --text-xl:    18px;
+  --text-2xl:   22px;
+  --text-3xl:   24px;
 
   /* ── 圆角 Token ── */
   --radius-xs: 4px;
@@ -321,28 +321,28 @@ svg[class*="lucide"] {
 body.theme-light {
   color-scheme: light;
 
-  /* ── 中性浅色表面层 ── */
-  --surface-base:      #f3f4f6;
+  /* ── 浅蓝工作台表面层 ── */
+  --surface-base:      #edf3fb;
   --surface-raised:    #ffffff;
-  --surface-overlay:   #ffffff;
-  --surface-sunken:    #e9ecef;
-  --surface-hover:     #e2e6eb;
-  --surface-active:    #d6dbe2;
-  --surface-canvas:    #faf9f9;  /* 激活标签融入内容区的底色（须与外凹反弧 SVG 填充一致） */
+  --surface-overlay:   #f8fbff;
+  --surface-sunken:    #e3edf9;
+  --surface-hover:     #f3f8ff;
+  --surface-active:    #d8e7fb;
+  --surface-canvas:    #f4f8fd;  /* 激活标签融入内容区的底色（须与外凹反弧 SVG 填充一致） */
 
-  --overlay-scrim: rgba(28, 35, 45, 0.32);
-  --border:        rgba(28, 35, 45, 0.14);
-  --border-light:  rgba(28, 35, 45, 0.08);
-  --border-subtle: rgba(28, 35, 45, 0.10);
-  --border-focus:  #2563eb;
-  --scrollbar-thumb:       rgba(100, 116, 139, 0.35);
-  --scrollbar-thumb-hover: rgba(71, 85, 105, 0.6);
+  --overlay-scrim: rgba(27, 42, 68, 0.28);
+  --border:        rgba(66, 102, 150, 0.16);
+  --border-light:  rgba(66, 102, 150, 0.09);
+  --border-subtle: rgba(66, 102, 150, 0.11);
+  --border-focus:  #2f80ed;
+  --scrollbar-thumb:       rgba(96, 126, 166, 0.30);
+  --scrollbar-thumb-hover: rgba(71, 105, 150, 0.52);
   --scrollbar-track:       transparent;
 
-  --text-primary:    #111827;
-  --text-secondary:  #334155;
-  --text-tertiary:   #526176;
-  --text-muted:      #6b7a8f;
+  --text-primary:    #1b2a44;
+  --text-secondary:  #445876;
+  --text-tertiary:   #71839c;
+  --text-muted:      #94a4b8;
 
   /* File icons (light: deeper/saturated for contrast on light bg) */
   --file-icon-folder: #ca8a04;
@@ -384,28 +384,28 @@ body.theme-light {
   --probe-detail:    #334155;
   --probe-faint:     #526176;
 
-  --accent:         #2563eb;
-  --accent-rgb:     37, 99, 235;
-  --accent-hover:   #1d4ed8;
-  --accent-dim:     rgba(37, 99, 235, 0.08);
-  --accent-border:  rgba(37, 99, 235, 0.22);
+  --accent:         #2f80ed;
+  --accent-rgb:     47, 128, 237;
+  --accent-hover:   #236dcc;
+  --accent-dim:     rgba(47, 128, 237, 0.10);
+  --accent-border:  rgba(47, 128, 237, 0.20);
 
-  --success-rgb:   22, 163, 74;
-  --danger-rgb:    220, 38, 38;
-  --warning-rgb:   202, 138, 4;
+  --success-rgb:   34, 181, 115;
+  --danger-rgb:    224, 91, 104;
+  --warning-rgb:   237, 155, 77;
 
-  --success:        #16a34a;
-  --success-dim:    rgba(22, 163, 74, 0.08);
+  --success:        #22b573;
+  --success-dim:    rgba(34, 181, 115, 0.10);
 
-  --danger:         #dc2626;
-  --danger-dim:     rgba(220, 38, 38, 0.08);
+  --danger:         #e05b68;
+  --danger-dim:     rgba(224, 91, 104, 0.10);
 
-  --warning:        #ca8a04;
-  --warning-dim:    rgba(202, 138, 4, 0.08);
+  --warning:        #ed9b4d;
+  --warning-dim:    rgba(237, 155, 77, 0.12);
 
-  --info:           #7c3aed;
-  --info-rgb:       124, 58, 237;
-  --info-dim:       rgba(124, 58, 237, 0.08);
+  --info:           #8a6fe8;
+  --info-rgb:       138, 111, 232;
+  --info-dim:       rgba(138, 111, 232, 0.10);
 
   --ai-chat-risk-danger-border: rgba(var(--danger-rgb), 0.24);
   --ai-chat-risk-danger-bg: rgba(var(--danger-rgb), 0.08);
@@ -439,13 +439,13 @@ body.theme-light {
   --ai-chat-completion-card-bg: var(--surface-overlay);
   --ai-chat-completion-card-header-bg: rgba(var(--success-rgb), 0.04);
 
-  --shadow-xs:  0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-sm:  0 1px 3px rgba(16,24,40,.06), 0 1px 2px rgba(16,24,40,.05);
-  --shadow-md:  0 4px 12px rgba(16,24,40,.08), 0 2px 6px rgba(16,24,40,.06);
-  --shadow-lg:  0 6px 16px rgba(15, 23, 42, 0.10);
-  --shadow-xl:  0 10px 24px rgba(15, 23, 42, 0.12);
-  --shadow-card: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
-  --shadow-card-hover: 0 4px 12px rgba(16, 24, 40, 0.08), 0 2px 6px rgba(16, 24, 40, 0.06);
+  --shadow-xs:  0 1px 2px rgba(56, 82, 125, 0.04);
+  --shadow-sm:  0 2px 6px rgba(56, 82, 125, 0.06), 0 1px 2px rgba(56, 82, 125, 0.04);
+  --shadow-md:  0 8px 20px rgba(56, 82, 125, 0.09), 0 2px 6px rgba(56, 82, 125, 0.05);
+  --shadow-lg:  0 12px 28px rgba(56, 82, 125, 0.12);
+  --shadow-xl: 0 16px 36px rgba(56, 82, 125, 0.14);
+  --shadow-card: 0 2px 7px rgba(56, 82, 125, 0.07), 0 1px 2px rgba(56, 82, 125, 0.04);
+  --shadow-card-hover: 0 10px 24px rgba(56, 82, 125, 0.12), 0 3px 8px rgba(56, 82, 125, 0.06);
 
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-spring: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease, background-color 0.12s ease, border-color 0.12s ease;
@@ -460,14 +460,14 @@ body.theme-light {
   --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* 浅色中间档：未选中再亮；选中淡蓝底 + 深字 + 底线 */
-  --tab-inactive-bg: #e4e8ee;
-  --tab-inactive-bg-hover: #d8dee6;
-  --tab-inactive-border: rgba(28, 35, 45, 0.16);
-  --tab-inactive-text: #1f2937;
+  /* 浅色标签：用浅蓝填充和阴影表达层级，不依赖分隔线 */
+  --tab-inactive-bg: #e7eff9;
+  --tab-inactive-bg-hover: #dceaf8;
+  --tab-inactive-border: rgba(66, 102, 150, 0.12);
+  --tab-inactive-text: #445876;
   --tab-active-bg: color-mix(in srgb, var(--accent) 14%, #ffffff);
   --tab-active-border: color-mix(in srgb, var(--accent) 42%, var(--border));
-  --tab-active-text: #0f172a;
+  --tab-active-text: #1b2a44;
   --tab-radius: 0;
 }
 

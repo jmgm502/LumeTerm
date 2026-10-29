@@ -80,7 +80,7 @@ export default function ThemePackagePalette({
                     </div>
                   ) : null}
                 </div>
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full border border-line text-tertiary shrink-0">
+                <span className="text-[11px] px-1.5 py-0.5 rounded-full border border-line text-tertiary shrink-0">
                   {themePackage.source === 'builtin' ? $t('内置') : $t('用户')}
                 </span>
                 {copyTargetMode ? (

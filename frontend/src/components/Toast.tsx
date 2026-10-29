@@ -85,7 +85,7 @@ export default function Toast({ toasts, onClose, onAction, closeLabel }: ToastPr
                       key={`${item.id}-${action.label}-${index}`}
                       variant={index === item.actions.length - 1 ? 'primary' : 'secondary'}
                       size="sm"
-                      className="h-6 px-2 text-[11px] rounded-[var(--radius-sm)]"
+                      className="h-6 px-2 text-[12px] rounded-[var(--radius-sm)]"
                       onClick={() => onAction?.(item.id, action)}
                     >
                       {action.label as ReactNode}

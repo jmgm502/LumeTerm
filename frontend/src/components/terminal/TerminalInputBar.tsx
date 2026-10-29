@@ -107,29 +107,29 @@ export function TerminalInputBar({
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-secondary">{t('执行命令')}</span>
-              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">Enter</kbd>
+              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">Enter</kbd>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-secondary">{t('换行多行输入')}</span>
-              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">Shift + Enter</kbd>
+              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">Shift + Enter</kbd>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-secondary">{t('快捷命令列表')}</span>
-              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">/</kbd>
+              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">/</kbd>
             </div>
             {altOpenHistoryEnabled && (
               <div className="flex items-center justify-between gap-3">
                 <span className="text-secondary">{t('搜索历史指令')}</span>
-                <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">Alt</kbd>
+                <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">Alt</kbd>
               </div>
             )}
             <div className="flex items-center justify-between gap-3">
               <span className="text-secondary">{t('补全候选项')}</span>
-              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">Tab</kbd>
+              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">Tab</kbd>
             </div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-secondary">{t('关闭此提示')}</span>
-              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[10px] font-mono">F1</kbd>
+              <kbd className="bg-overlay border border-line rounded-xs px-[5px] py-px text-[11px] font-mono">F1</kbd>
             </div>
           </div>
         ) : undefined}

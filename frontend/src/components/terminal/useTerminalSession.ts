@@ -243,7 +243,7 @@ export function useTerminalSession(deps: {
     // 终端从此钉死在 80x24，直到用户手动改窗口尺寸。
     lastFitRectRef.current = null;
 
-    const fontSize = parseInt(localStorage.getItem('terminalFontSize') || '13', 10);
+    const fontSize = parseInt(localStorage.getItem('terminalFontSize') || '14', 10);
 
     const term = new XTerm({
       // background 用不透明的容器底色：nano/vim 的反转显示（SGR 7）需要真实的背景色参与

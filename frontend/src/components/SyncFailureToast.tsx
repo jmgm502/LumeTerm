@@ -49,7 +49,7 @@ export default function SyncFailureToast({ syncFailed, setSyncFailed, setSetting
       style={{ zIndex: Z.TOAST }}
     >
       <div className="flex items-start gap-[14px]">
-        <div className="text-[28px] leading-none text-warning shrink-0" aria-hidden>⚠</div>
+        <div className="text-[30px] leading-none text-warning shrink-0" aria-hidden>⚠</div>
         <div className="flex-1 min-w-0">
           <div className="text-lg font-semibold text-primary mb-1">{t('云端同步失败')}</div>
           <div className="text-base text-secondary leading-normal mb-[6px]">{syncFailed.category === 'trust' ? t('服务器身份信息已变化，请前往“设置 → 同步与云”核对后恢复同步。') : t('数据未能上传到云端，本地数据不受影响。')}</div>

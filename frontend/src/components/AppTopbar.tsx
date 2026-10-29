@@ -201,7 +201,7 @@ export default function AppTopbar({
                           >
                             <span
                               className={cn(
-                                'no-drag min-w-[15px] h-[15px] px-1 rounded-full text-[10px] font-bold leading-[15px] text-center shrink-0 cursor-default border',
+                                'no-drag min-w-[15px] h-[15px] px-1 rounded-full text-[11px] font-bold leading-[15px] text-center shrink-0 cursor-default border',
                                 nearLimit
                                   ? 'bg-warning-dim text-warning border-warning'
                                   : 'bg-sunken text-tertiary border-line',

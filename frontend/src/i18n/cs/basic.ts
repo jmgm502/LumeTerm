@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH je ověřeno, ale při otevírání terminálového kanálu je odezva pomalá. Server se možná zotavuje nebo je silně zatížen.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Stále čeká, automaticky se odpojí, jakmile celková doba čekání dosáhne 30 sekund.",
   "服务器别名（选填）": "Alias ​​serveru (volitelné)",
+  "到期时间": "Datum vypršení",
   "例如：我的测试服": "Například: můj testovací server",
   "主机地址 *": "Adresa hostitele *",
   "用户名": "uživatelské jméno",

@@ -63,7 +63,7 @@ export default function AIPanelBasicSettingsTab({
   return (
     <>
       <div className="grid gap-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('基本')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('基本')}</div>
       </div>
       <div className="bg-canvas p-4 rounded-[var(--radius-md)] border border-line grid gap-3">
         <div className="flex justify-between items-center gap-4">
@@ -232,7 +232,7 @@ export default function AIPanelBasicSettingsTab({
         </div>
       </div>
       <div className="grid gap-1 mt-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('数据存储')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('数据存储')}</div>
       </div>
       <div className="bg-canvas p-4 rounded-[var(--radius-md)] border border-line grid gap-3">
         <div className="grid gap-2">

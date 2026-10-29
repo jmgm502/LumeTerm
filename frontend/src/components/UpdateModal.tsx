@@ -24,7 +24,7 @@ export default function UpdateModal({ visible, updateInfo, downloadProgress, t, 
       style={{ zIndex: Z.MODAL }}
     >
       <div className="flex items-start gap-[14px]">
-        <div className="text-[28px] leading-none text-secondary"><Rocket size={28} /></div>
+        <div className="text-[30px] leading-none text-secondary"><Rocket size={28} /></div>
         <div className="flex-1">
           <div className="flex items-center gap-2 text-lg font-semibold text-primary mb-1">
             {t('发现新版本')} <span className="text-success text-base bg-success-dim py-[2px] px-[6px] rounded-md">{updateInfo.version}</span>

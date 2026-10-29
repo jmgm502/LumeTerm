@@ -238,7 +238,7 @@ export function renderFileManagerToolbar(fm: FileManagerController) {
               <ClipboardList size={14} />
               {activeUploadCount > 0 && (
                 <span
-                  className="absolute -top-1 -right-1 min-w-[15px] h-[15px] px-1 rounded-full bg-accent text-white text-[10px] font-bold leading-[15px] text-center"
+                  className="absolute -top-1 -right-1 min-w-[15px] h-[15px] px-1 rounded-full bg-accent text-white text-[11px] font-bold leading-[15px] text-center"
                 >
                   {activeUploadCount > 99 ? '99+' : activeUploadCount}
                 </span>

@@ -24,7 +24,7 @@ export default function AIPanelAppearanceSettingsTab({
   return (
     <>
       <div className="grid gap-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('外观')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('外观')}</div>
         <div className="text-sm text-tertiary leading-[1.5]">{t('控制底部审批与命令处理按钮的左右位置。')}</div>
       </div>
       <PositionSelectorCard

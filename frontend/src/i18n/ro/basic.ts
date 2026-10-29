@@ -96,6 +96,7 @@ export default {
   "SSH 已认证，但打开终端通道响应较慢，服务器可能正在恢复或负载较高。": "SSH este autentificat, dar răspunsul este lent la deschiderea unui canal terminal. Serverul poate fi în curs de recuperare sau sub sarcină grea.",
   "仍在继续等待，总等待时间达到 30 秒后会自动断开。": "Încă în așteptare, se va deconecta automat după ce timpul total de așteptare ajunge la 30 de secunde.",
   "服务器别名（选填）": "Alias ​​de server (opțional)",
+  "到期时间": "Data expirării",
   "例如：我的测试服": "De exemplu: serverul meu de testare",
   "主机地址 *": "Adresa gazdei *",
   "用户名": "nume de utilizator",

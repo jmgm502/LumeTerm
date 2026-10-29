@@ -326,7 +326,7 @@ export default function AIChatToolCard({
               <span>{t('预计剩余 {count} 个编辑文件').replace('{count}', String(normalizedRemainingFileEdits))}</span>
             </div>
           ) : (
-            <div className="text-[10px] font-bold uppercase tracking-[0.5px] text-tertiary">{actionLabel}</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.5px] text-tertiary">{actionLabel}</div>
           )}
           {readFileTokenEstimates.length > 0 ? (
             <ReadFileTokenList items={readFileTokenEstimates} t={t} />

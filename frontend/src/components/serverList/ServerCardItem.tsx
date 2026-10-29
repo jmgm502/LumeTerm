@@ -4,6 +4,7 @@ import type { config } from '../../../wailsjs/go/models.ts';
 import type { ServerPingResult } from '../../hooks/useServerPing.ts';
 import { useTranslation } from '../../i18n.ts';
 import { cn } from '../../utils/cn.ts';
+import { isExpirationDateUrgent } from '../../utils/expirationDate.ts';
 import Tiptop from '../Tiptop.tsx';
 import { getOSInfo, LATENCY_CLASS } from './serverIcons.tsx';
 
@@ -59,6 +60,7 @@ export function ServerCardItem({
   const osInfo = getOSInfo(server.name, server.os, (sessionForServer?.osInfo as Record<string, unknown> | null | undefined) || null);
   const { rowToken, nameToken, hostToken } = getSaveFlowTokens(server);
   const isChecked = selectedSet.has(server.id);
+  const expirationClass = isExpirationDateUrgent(server.expirationDate || '') ? 'text-danger' : 'text-tertiary';
 
   const handleCardClick = (e: React.MouseEvent) => {
     if (selectionMode) {
@@ -111,7 +113,7 @@ export function ServerCardItem({
               {server.name || server.host}
             </span>
             {connected && (
-              <span className="text-[10px] text-success font-mono shrink-0">
+              <span className="text-[11px] text-success font-mono shrink-0">
                 ● {t('已连接')}
               </span>
             )}
@@ -124,6 +126,12 @@ export function ServerCardItem({
               {hideSensitive ? mask(`${server.username}@${server.host}`) : `${server.username}@${server.host}:${server.port || 22}`}
             </span>
           </div>
+          {server.expirationDate && (
+            <div className={cn('flex flex-wrap items-baseline gap-x-1 text-xs font-mono', expirationClass)}>
+              <span>{t('到期时间')}:</span>
+              <span className="whitespace-nowrap">{server.expirationDate}</span>
+            </div>
+          )}
         </div>
         <div className="flex items-center gap-1.5 shrink-0">
           {ping?.online && ping?.latency !== undefined && ping?.latency !== null ? (

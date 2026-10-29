@@ -28,7 +28,7 @@ export function AIComposerMentionMenu({
         style={{ zIndex: Z.POPUP }}
         className="absolute bottom-[calc(100%+8px)] left-0 min-w-[240px] max-w-[360px] max-h-[260px] p-1 rounded-[var(--radius-md)] border border-line bg-overlay shadow-xl overflow-y-auto grid gap-0.5"
       >
-        <div className="px-2.5 py-1 text-[10px] font-bold text-tertiary uppercase tracking-wider border-b border-line-subtle mb-0.5">
+        <div className="px-2.5 py-1 text-[11px] font-bold text-tertiary uppercase tracking-wider border-b border-line-subtle mb-0.5">
           {t('斜杠命令')}
         </div>
         {slashCommandMenu.items.map((item, index) => {

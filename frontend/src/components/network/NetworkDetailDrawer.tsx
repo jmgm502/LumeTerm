@@ -131,7 +131,7 @@ export function NetworkDetailDrawer({
                 <div
                   key={`${activeDetailConnection.key}-peer-${peerIndex}`}
                   style={{ gridTemplateColumns: 'minmax(180px,1.4fr) minmax(130px,1fr) 80px 90px 90px' }}
-                  className="grid gap-2.5 px-2.5 py-[7px] text-primary text-[12.5px] border border-line-subtle border-t-0"
+                  className="grid gap-2.5 px-2.5 py-[7px] text-primary text-[13.5px] border border-line-subtle border-t-0"
                 >
                   <span className="text-tertiary truncate" title={formatLocation(peer.location)}>{formatLocation(peer.location)}</span>
                   <span className="font-mono">{peer.ip || '-'}</span>

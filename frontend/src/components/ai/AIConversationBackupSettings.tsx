@@ -306,7 +306,7 @@ export default function AIConversationBackupSettings({
   return (
     <div className="flex flex-1 min-h-0 flex-col gap-3">
       <div className="grid shrink-0 gap-1">
-        <div className="text-[18px] font-bold text-primary leading-[1.3]">{t('自动备份')}</div>
+        <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{t('自动备份')}</div>
         <div className="text-sm text-tertiary leading-[1.5]">{t('查看和恢复当前对话的自动备份记录。')}</div>
       </div>
       {autoBackupControl}
@@ -369,7 +369,7 @@ export default function AIConversationBackupSettings({
                 <ChevronLeft size={14} />
                 <span>{t('返回')}</span>
               </button>
-              <div className="text-[18px] font-bold text-primary leading-[1.3]">{`${t('自动备份')} / ${formatBackupIdTime(selectedBackup.id, lang)}`}</div>
+              <div className="text-[19.5px] font-bold text-primary leading-[1.3]">{`${t('自动备份')} / ${formatBackupIdTime(selectedBackup.id, lang)}`}</div>
               <div className="text-sm text-tertiary leading-[1.5]">{historyEntries.length} {t('消息')}</div>
             </div>
             {historyLoading ? (

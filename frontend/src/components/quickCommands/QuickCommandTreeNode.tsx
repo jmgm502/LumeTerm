@@ -49,7 +49,7 @@ export function TreeNode({
     <Tiptop text={dir === -1 ? t('上移') : t('下移')}>
       <span
         onClick={(e) => { e.stopPropagation(); onMove?.(path, dir); }}
-        className="text-[10px] cursor-pointer text-muted px-[3px] leading-[14px] select-none"
+        className="text-[11px] cursor-pointer text-muted px-[3px] leading-[14px] select-none"
         style={{ visibility: hover ? 'visible' : 'hidden' }}
       >
         {dir === -1 ? '▲' : '▼'}
@@ -117,7 +117,7 @@ export function TreeNode({
                     : 'text-secondary'
             }`}
           >
-            <span className="text-[10px] w-3.5 text-center shrink-0">
+            <span className="text-[11px] w-3.5 text-center shrink-0">
               {isExpanded ? '▼' : '▶'}
             </span>
             <span className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm">

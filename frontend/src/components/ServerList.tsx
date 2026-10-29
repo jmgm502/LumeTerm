@@ -136,6 +136,7 @@ export default function ServerList(props: ServerListProps) {
                 <th>{t('别名')}</th>
                 <th>{t('主机地址')}</th>
                 <th>{t('用户名')}</th>
+                <th>{t('到期时间')}</th>
                 <th>{t('状态')}</th>
                 <th>{t('操作')}</th>
               </tr>

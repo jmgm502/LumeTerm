@@ -67,13 +67,13 @@ export function ProcessTable({
       {loading && !processes ? (
         <EmptyState
           className="mt-[10vh]"
-          icon={<span className="text-[32px]">⟳</span>}
+          icon={<span className="text-[34.5px]">⟳</span>}
           text={<span className="text-md text-secondary">{t('正在加载进程列表...')}</span>}
         />
       ) : error ? (
         <EmptyState
           className="mt-[10vh]"
-          icon={<span className="text-[32px]">✕</span>}
+          icon={<span className="text-[34.5px]">✕</span>}
           text={<span className="text-md text-danger">{t('加载失败')}</span>}
           action={
             <>
@@ -148,7 +148,7 @@ export function ProcessTable({
                 onContextMenu={(e) => onRowContextMenu(e, p)}
                 style={{ gridTemplateColumns: tableColumns }}
                 className={cn(
-                  'grid gap-0 border-b border-line-light text-[12.5px] font-mono tabular-nums text-primary cursor-pointer',
+                  'grid gap-0 border-b border-line-light text-[13.5px] font-mono tabular-nums text-primary cursor-pointer',
                   selectedPids.has(p.pid) || contextMenu?.process?.pid === p.pid || activePid === p.pid
                     ? 'bg-active'
                     : 'bg-transparent',
@@ -168,7 +168,7 @@ export function ProcessTable({
                     className="cursor-pointer"
                   />
                 </div>
-                <div className="px-1.5 py-1.5 text-right text-tertiary text-[11.5px] border-r border-line-light" onClick={() => onRowClick(p)}>
+                <div className="px-1.5 py-1.5 text-right text-tertiary text-[12.5px] border-r border-line-light" onClick={() => onRowClick(p)}>
                   {p.pid}
                 </div>
                 <div
@@ -181,7 +181,7 @@ export function ProcessTable({
                 <div className="px-1.5 py-1.5 text-right text-primary border-r border-line-light" onClick={() => onRowClick(p)}>
                   {fmem(p.mem)}
                 </div>
-                <div className="px-1.5 py-1.5 text-left text-tertiary text-[11.5px] truncate border-r border-line-light" title={p.user} onClick={() => onRowClick(p)}>
+                <div className="px-1.5 py-1.5 text-left text-tertiary text-[12.5px] truncate border-r border-line-light" title={p.user} onClick={() => onRowClick(p)}>
                   {p.user}
                 </div>
                 <div className="px-1.5 py-1.5 text-left truncate border-r border-line-light" title={`${p.name} ┊ ${p.cmd}`} onClick={() => onRowClick(p)}>
@@ -189,7 +189,7 @@ export function ProcessTable({
                   <span className="text-muted mx-0.5">┊</span>
                   <span className="text-secondary">{(p.cmd || p.name)}</span>
                 </div>
-                <div className="px-1.5 py-1.5 text-left text-tertiary text-[11.5px] truncate" title={p.loc} onClick={() => onRowClick(p)}>
+                <div className="px-1.5 py-1.5 text-left text-tertiary text-[12.5px] truncate" title={p.loc} onClick={() => onRowClick(p)}>
                   {p.loc}
                 </div>
               </div>

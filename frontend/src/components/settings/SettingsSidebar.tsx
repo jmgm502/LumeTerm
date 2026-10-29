@@ -76,7 +76,7 @@ export default function SettingsSidebar({
             >
               <div className="text-sm font-semibold text-primary leading-[1.4]">{result.title}</div>
               {result.description ? <div className="text-xs text-tertiary leading-[1.5]">{result.description}</div> : null}
-              <div className="text-[10px] text-tertiary leading-[1.5]">{result.breadcrumbLabels.length > 0 ? result.breadcrumbLabels.join(' / ') : result.tabLabel}</div>
+              <div className="text-[11px] text-tertiary leading-[1.5]">{result.breadcrumbLabels.length > 0 ? result.breadcrumbLabels.join(' / ') : result.tabLabel}</div>
             </button>
           )) : (
             <div className="py-2.5 px-3 rounded-[var(--radius-sm)] border border-dashed border-line bg-raised">

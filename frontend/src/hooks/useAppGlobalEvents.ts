@@ -37,7 +37,7 @@ export default function useAppGlobalEvents({
   addToast,
   t,
 }: UseAppGlobalEventsOptions) {
-  const [quickThemeMode, setQuickThemeMode] = useState<string>(localStorage.getItem('themeMode') || 'dark');
+  const [quickThemeMode, setQuickThemeMode] = useState<string>(localStorage.getItem('themeMode') || 'light');
   const [showThemeQuickEntry, setShowThemeQuickEntry] = useState(localStorage.getItem('showThemeQuickEntry') !== 'false');
   const [showBigScreenQuickEntry, setShowBigScreenQuickEntry] = useState(localStorage.getItem('showBigScreenQuickEntry') !== 'false');
   const [showAIQuickEntry, setShowAIQuickEntry] = useState(localStorage.getItem('showAIQuickEntry') !== 'false');
@@ -120,7 +120,7 @@ export default function useAppGlobalEvents({
   // Theme quick entry & toolbar
   useEffect(() => {
     const refreshThemeQuickEntry = () => {
-      setQuickThemeMode(localStorage.getItem('themeMode') || 'dark');
+      setQuickThemeMode(localStorage.getItem('themeMode') || 'light');
       setShowThemeQuickEntry(localStorage.getItem('showThemeQuickEntry') !== 'false');
       setShowBigScreenQuickEntry(localStorage.getItem('showBigScreenQuickEntry') !== 'false');
       setShowAIQuickEntry(localStorage.getItem('showAIQuickEntry') !== 'false');

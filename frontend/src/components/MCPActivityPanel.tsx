@@ -198,7 +198,7 @@ export default function MCPActivityPanel({ height = '100%', onClose, onApprovalR
             onClick={onClose}
             onPointerDown={(e) => e.stopPropagation()}
             onDoubleClick={(e) => e.stopPropagation()}
-            className="bg-transparent border-none text-secondary cursor-pointer text-[16px] px-1.5 py-[2px] rounded-[var(--radius-sm)] hover:bg-hover hover:text-primary transition-colors duration-[80ms]"
+            className="bg-transparent border-none text-secondary cursor-pointer text-[17.5px] px-1.5 py-[2px] rounded-[var(--radius-sm)] hover:bg-hover hover:text-primary transition-colors duration-[80ms]"
             title={t('关闭')}
           >
             ✕
@@ -233,7 +233,7 @@ export default function MCPActivityPanel({ height = '100%', onClose, onApprovalR
                 {/* Card header */}
                 <div className="flex items-center gap-1.5 mb-1.5">
                   <span
-                    className="text-[10px] font-semibold px-1.5 py-[2px] rounded-[var(--radius-sm)] uppercase tracking-[0.5px]"
+                    className="text-[11px] font-semibold px-1.5 py-[2px] rounded-[var(--radius-sm)] uppercase tracking-[0.5px]"
                     style={{ background: `${clientColor}22`, color: clientColor }}
                   >
                     {first.clientName || 'unknown'}
@@ -241,11 +241,11 @@ export default function MCPActivityPanel({ height = '100%', onClose, onApprovalR
                   <span className="text-xs text-secondary">
                     {first.serverName || '—'}
                   </span>
-                  <span className="text-[10px] text-tertiary">
+                  <span className="text-[11px] text-tertiary">
                     {first.tool}
                   </span>
                   <div className="flex-1" />
-                  <span className="text-[10px] text-tertiary">
+                  <span className="text-[11px] text-tertiary">
                     {formatTime(latest.timestamp)}
                   </span>
                 </div>
@@ -279,10 +279,10 @@ export default function MCPActivityPanel({ height = '100%', onClose, onApprovalR
                 {/* Output preview */}
                 {latest.output && latest.output.trim() && (
                   <details className="mt-1.5">
-                    <summary className="text-[10px] text-tertiary cursor-pointer">
+                    <summary className="text-[11px] text-tertiary cursor-pointer">
                       {t('输出预览')}
                     </summary>
-                    <pre className="text-[10px] font-mono text-secondary bg-black/30 px-2 py-1.5 rounded-[var(--radius-sm)] mt-1 max-h-[200px] overflow-auto whitespace-pre-wrap break-all">
+                    <pre className="text-[11px] font-mono text-secondary bg-black/30 px-2 py-1.5 rounded-[var(--radius-sm)] mt-1 max-h-[200px] overflow-auto whitespace-pre-wrap break-all">
                       {latest.output}
                     </pre>
                   </details>

@@ -3,7 +3,7 @@ import { loadKeywordRulesFromStorage, saveKeywordRulesToStorage, resetKeywordRul
 import { readEditorWordWrap, writeEditorWordWrap } from '../../../utils/editorWordWrap.ts';
 
 /** 终端字号出厂默认值（与初始化读取保持一致） */
-export const DEFAULT_TERMINAL_FONT_SIZE = 13;
+export const DEFAULT_TERMINAL_FONT_SIZE = 14;
 
 /** 终端显示偏好：字号、本地回显、时间戳、命令块、关键字高亮规则等（localStorage 直写型开关） */
 export function useTerminalPreferences() {

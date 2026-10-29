@@ -197,7 +197,7 @@ func TestBuildConnectionsExport_OnlyReferencedCreds(t *testing.T) {
 // 导出 → 导入 往返测试：导出对象序列化后能被 parseImportData 正确解析
 func TestExportImportRoundTrip(t *testing.T) {
 	conns := []Connection{
-		{ID: "c1", Host: "h1", Port: 22, Username: "root", Password: "secret", AuthMethod: "password"},
+		{ID: "c1", Host: "h1", Port: 22, Username: "root", Password: "secret", AuthMethod: "password", ExpirationDate: "2027-03-14"},
 	}
 	creds := []Credential{}
 	exp := buildConnectionsExport(conns, creds)
@@ -210,7 +210,7 @@ func TestExportImportRoundTrip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("parse failed: %v", err)
 	}
-	if len(parsed.Connections) != 1 || parsed.Connections[0].Password != "secret" {
+	if len(parsed.Connections) != 1 || parsed.Connections[0].Password != "secret" || parsed.Connections[0].ExpirationDate != "2027-03-14" {
 		t.Fatalf("roundtrip lost data: %+v", parsed)
 	}
 }

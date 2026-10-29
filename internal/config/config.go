@@ -79,6 +79,7 @@ type Connection struct {
 	PrivateKey          string `json:"privateKey,omitempty"`
 	Passphrase          string `json:"passphrase,omitempty"`
 	Group               string `json:"group,omitempty"` // 服务器分组，空=未分组
+	ExpirationDate      string `json:"expirationDate,omitempty"` // 到期日期，YYYY-MM-DD
 	Os                  string `json:"os,omitempty"`
 	CredentialID        string `json:"credentialId,omitempty"` // ponytail: 非空时用 Credential 认证，忽略内联字段
 	TerminalInitPath    string `json:"terminalInitPath,omitempty"`

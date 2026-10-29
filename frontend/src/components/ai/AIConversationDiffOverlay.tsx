@@ -138,7 +138,7 @@ export default function AIConversationDiffOverlay({
               <Columns2 size={18} />
             </div>
             <div className="min-w-0">
-              <div className="text-[16px] font-extrabold text-primary">{t('当前对话文件变更')}</div>
+              <div className="text-[17.5px] font-extrabold text-primary">{t('当前对话文件变更')}</div>
               <div className="text-sm text-tertiary whitespace-nowrap overflow-hidden text-ellipsis">
                 {sessionLabel ? t('会话 · {label}', { label: sessionLabel }) : t('当前对话文件变更')}
               </div>

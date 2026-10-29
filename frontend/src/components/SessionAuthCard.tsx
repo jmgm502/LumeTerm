@@ -158,7 +158,7 @@ export default function SessionAuthCard({ prompt, isActive, t, onResolve }: Sess
         </div>
 
         {/* 正文（含指纹 / 错误详情） */}
-        <div className="text-[12.5px] text-secondary leading-[1.65] whitespace-pre-wrap break-words [overflow-wrap:anywhere] select-text max-h-[38vh] overflow-y-auto mb-[18px]">
+        <div className="text-[13.5px] text-secondary leading-[1.65] whitespace-pre-wrap break-words [overflow-wrap:anywhere] select-text max-h-[38vh] overflow-y-auto mb-[18px]">
           {prompt.message}
         </div>
 
@@ -193,7 +193,7 @@ export default function SessionAuthCard({ prompt, isActive, t, onResolve }: Sess
               ><Clipboard size={16} /></button>
             </div>
             {prompt.checkboxLabel && (
-              <label htmlFor="session-auth-remember" className="flex items-center gap-2 mb-[18px] text-[12.5px] text-secondary cursor-pointer">
+              <label htmlFor="session-auth-remember" className="flex items-center gap-2 mb-[18px] text-[13.5px] text-secondary cursor-pointer">
                 <input
                   id="session-auth-remember"
                   name="session-auth-remember"
@@ -220,7 +220,7 @@ export default function SessionAuthCard({ prompt, isActive, t, onResolve }: Sess
                 onClick={() => submit(btn.value)}
                 onMouseEnter={() => setFocusIdx(i)}
                 aria-keyshortcuts={btn.accessKey?.toUpperCase()}
-                className={`flex-1 py-[9px] text-[12.5px] rounded-[var(--radius-sm)] whitespace-nowrap ${
+                className={`flex-1 py-[9px] text-[13.5px] rounded-[var(--radius-sm)] whitespace-nowrap ${
                   btn.primary
                     ? 'bg-accent text-white border border-accent'
                     : 'bg-sunken hover:bg-hover text-secondary border border-line'

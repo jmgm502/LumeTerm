@@ -328,9 +328,10 @@ body.theme-light.has-global-wallpaper .tab-item.active::after {
 }
 
 body.theme-light .topbar-home-btn.active {
-  background: #faf9f9;
+  background: var(--surface-canvas);
   border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border-subtle));
-  border-bottom: 1px solid #faf9f9;
+  border-bottom: 1px solid var(--surface-canvas);
+  box-shadow: 0 -1px 4px rgba(56, 82, 125, 0.05);
 }
 
 .tab-close {

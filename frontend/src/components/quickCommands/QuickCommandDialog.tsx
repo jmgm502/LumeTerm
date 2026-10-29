@@ -95,7 +95,7 @@ export function QuickCommandDialog({
             className="badge cursor-pointer select-none"
           >
             {dialog.groupName || t('根目录')}
-            <span className="text-[8px] opacity-70">▼</span>
+            <span className="text-[8.5px] opacity-70">▼</span>
           </span>
         </div>
       )}
@@ -126,7 +126,7 @@ export function QuickCommandDialog({
                   <button
                     onClick={() => insertParam(n)}
                     aria-label={t('插入参数 p#') + n}
-                    className="bg-transparent border border-line rounded-[var(--radius-sm)] text-secondary text-[10px] cursor-pointer px-1.5 py-px font-mono transition-colors duration-[80ms] hover:bg-hover hover:text-primary"
+                    className="bg-transparent border border-line rounded-[var(--radius-sm)] text-secondary text-[11px] cursor-pointer px-1.5 py-px font-mono transition-colors duration-[80ms] hover:bg-hover hover:text-primary"
                   >
                     {t('参数')}{n}
                   </button>

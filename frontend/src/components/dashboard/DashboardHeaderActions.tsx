@@ -70,7 +70,7 @@ export function DashboardHeaderActions({
   const { t } = useTranslation();
 
   return (
-    <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-2 py-1">
+    <div className="dashboard-header-actions flex w-full flex-wrap items-center gap-x-3 gap-y-2 py-1">
       {/* 左侧：模式切换 + 搜索（占满剩余宽度，输入框不再窄） */}
       <div className="flex min-w-0 flex-1 items-center gap-3">
         <div className="inline-flex h-8.5 shrink-0 items-center gap-0.5 rounded-[var(--radius-sm)] border border-line-subtle bg-sunken p-0.5">
@@ -109,7 +109,7 @@ export function DashboardHeaderActions({
               {recentServersCount > 0 && (
                 <span
                   className={cn(
-                    'ml-0.5 inline-flex min-w-[18px] h-[17px] items-center justify-center rounded-full px-1 text-[11px] font-semibold leading-none font-mono',
+                    'ml-0.5 inline-flex min-w-[18px] h-[17px] items-center justify-center rounded-full px-1 text-[12px] font-semibold leading-none font-mono',
                     hostPageMode === 'recent'
                       ? 'bg-accent text-white shadow-sm'
                       : 'bg-accent/15 text-accent ring-1 ring-accent/25 ring-inset',
@@ -133,7 +133,7 @@ export function DashboardHeaderActions({
             type="search"
             autoComplete="off"
             aria-label={t('搜索服务器...')}
-            className="h-8.5 w-full rounded-[var(--radius-sm)] border border-line-subtle bg-sunken pl-9 pr-8 text-[13px] text-primary placeholder:text-muted outline-none transition-colors focus:border-focus focus:bg-raised focus:ring-2 focus:ring-accent/20 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+            className="h-8.5 w-full rounded-[var(--radius-sm)] border border-line-subtle bg-sunken pl-9 pr-8 text-[14px] text-primary placeholder:text-muted outline-none transition-colors focus:border-focus focus:bg-raised focus:ring-2 focus:ring-accent/20 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
             placeholder={t('搜索服务器...')}
             value={searchQuery}
             onChange={onSearchChange}
@@ -260,7 +260,7 @@ export function DashboardHeaderActions({
               <Button
                 variant="secondary"
                 onClick={onToggleCollapseAllGroups}
-                className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[13px] font-medium"
+                className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[14px] font-medium"
               >
                 {allCollapsed ? <Folder size={14} /> : <FolderOpen size={14} />}
                 <span className="hidden sm:inline">{allCollapsed ? t('打开分组') : t('收起分组')}</span>
@@ -271,7 +271,7 @@ export function DashboardHeaderActions({
               variant="secondary"
               onClick={onOpenImportExport}
               aria-label={t('数据管理')}
-              className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[13px] font-medium"
+              className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[14px] font-medium"
             >
               <Database size={14} />
               <span className="hidden sm:inline">{t('数据管理')}</span>
@@ -303,7 +303,7 @@ export function DashboardHeaderActions({
               onClick={() => void onClearRecent()}
               disabled={!hasRecentServers}
               aria-label={t('清空最近连接')}
-              className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[13px] font-medium"
+              className="h-8.5 shrink-0 gap-1.5 rounded-[var(--radius-sm)] px-3 text-[14px] font-medium"
             >
               <Trash2 size={14} />
               <span>{t('清空')}</span>

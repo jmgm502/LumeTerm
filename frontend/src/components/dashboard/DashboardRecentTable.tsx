@@ -1,6 +1,7 @@
 import { Clock, X } from 'lucide-react';
 import type { config } from '../../../wailsjs/go/models.ts';
 import { useTranslation } from '../../i18n.ts';
+import { isExpirationDateUrgent } from '../../utils/expirationDate.ts';
 import { Button, EmptyState } from '../ui';
 import { maskSensitiveText, type DashboardSessionLike } from './dashboardTypes.ts';
 
@@ -53,6 +54,7 @@ export function DashboardRecentTable({
             <th>{t('别名')}</th>
             <th>{t('主机地址')}</th>
             <th>{t('用户名')}</th>
+            <th>{t('到期时间')}</th>
             <th>{t('分组')}</th>
             <th style={{ width: 88 }}>{t('操作')}</th>
           </tr>
@@ -67,13 +69,16 @@ export function DashboardRecentTable({
               : `${server.host}${server.port && server.port !== 22 ? `:${server.port}` : ''}`;
             const userText = hideSensitive ? maskSensitiveText(server.username) : (server.username || '');
             const groupText = server.group || t('未分组');
+            const expirationClass = server.expirationDate
+              ? (isExpirationDateUrgent(server.expirationDate) ? 'text-danger' : 'text-secondary')
+              : 'text-tertiary';
             return (
               <tr
                 key={server.id}
                 className={`server-table-row${active ? ' active' : ''}`}
                 onClick={() => onConnect?.(server)}
               >
-                <td style={{ color: 'var(--text-tertiary)', fontFamily: 'var(--font-mono)', fontSize: 12 }}>
+                <td style={{ color: 'var(--text-tertiary)', fontFamily: 'var(--font-mono)', fontSize: 13 }}>
                   {index + 1}
                 </td>
                 <td style={{ fontWeight: 500, color: 'var(--text-primary)' }}>
@@ -81,16 +86,19 @@ export function DashboardRecentTable({
                     {displayName}
                   </span>
                   {connected && (
-                    <span style={{ marginLeft: 6, fontSize: 10, color: 'var(--success)', padding: '2px 4px', background: 'var(--success-dim)', borderRadius: 4 }}>
+                    <span style={{ marginLeft: 6, fontSize: 11, color: 'var(--success)', padding: '2px 4px', background: 'var(--success-dim)', borderRadius: 4 }}>
                       {t('已连接')}
                     </span>
                   )}
                 </td>
-                <td style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: 'var(--text-secondary)' }}>
+                <td style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--text-secondary)' }}>
                   {hostText}
                 </td>
                 <td style={{ color: 'var(--text-secondary)' }}>{userText || '-'}</td>
-                <td style={{ fontSize: 12, color: 'var(--text-tertiary)' }}>
+                <td className={`font-mono ${expirationClass}`}>
+                  {server.expirationDate || '-'}
+                </td>
+                <td style={{ fontSize: 13, color: 'var(--text-tertiary)' }}>
                   {groupText}
                 </td>
                 <td>
