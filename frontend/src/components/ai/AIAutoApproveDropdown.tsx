@@ -1,4 +1,4 @@
-import { CheckCheck, X } from 'lucide-react';
+import { CheckCheck, ChevronDown, X } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Z } from '../../constants/zIndex.ts';
 import { useTranslation } from '../../i18n.ts';
@@ -188,18 +188,19 @@ export default function AIAutoApproveDropdown({ settings, onPatchSettings, disab
   };
 
   return (
-    <div ref={containerRef} className="relative shrink-0 overflow-visible" style={{ zIndex: open ? 40 : 'auto' }}>
+    <div ref={containerRef} className="ai-composer-option-wrap relative overflow-visible" style={{ zIndex: open ? 40 : 'auto' }}>
       <button
         type="button"
         disabled={disabled}
         onClick={() => setOpen((prev) => !prev)}
-        className={`h-7 inline-flex items-center gap-1.5 px-2.5 rounded-[var(--radius-sm)] border text-sm font-medium transition-colors duration-[80ms] whitespace-nowrap ${
-          open ? 'border-accent-border bg-[rgba(var(--accent-rgb),0.12)]' : 'border-line bg-transparent'
-        } ${normalizedSettings.autoApprovalEnabled ? 'text-primary' : 'text-secondary'} ${
-          disabled ? 'opacity-45 cursor-not-allowed' : 'cursor-pointer'
-        }`}>
-        {normalizedSettings.autoApprovalEnabled ? <CheckCheck size={12} /> : <X size={12} />}
-        <span>{buildTriggerLabel(t, normalizedSettings, enabledCount)}</span>
+        aria-expanded={open}
+        aria-label={t('自动批准')}
+        className={`ai-composer-option ${open || normalizedSettings.autoApprovalEnabled ? 'is-active' : ''}`}>
+        <span className="inline-flex min-w-0 items-center gap-1.5">
+          {normalizedSettings.autoApprovalEnabled ? <CheckCheck size={14} /> : <X size={14} />}
+          <span>{buildTriggerLabel(t, normalizedSettings, enabledCount)}</span>
+        </span>
+        <ChevronDown size={12} aria-hidden="true" className={open ? 'rotate-180' : ''} />
       </button>
       {open && triggerRect ? (
         <div

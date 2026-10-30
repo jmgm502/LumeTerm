@@ -154,7 +154,7 @@ export function measureAdaptiveLabelWidth(text: string, fontSize: number, fontWe
 export function measureAdaptiveLabelTriggerWidth(text: string, fontSize: number, {
   fontWeight = 500,
   fontFamily = 'sans-serif',
-  horizontalPadding = 20,
+  horizontalPadding = 40,
   minWidth = ADAPTIVE_PROVIDER_MIN_WIDTH,
 }: {
   fontWeight?: number;
@@ -238,10 +238,17 @@ export function resolveAdaptiveLabelLayout({
   if (bestLayout) {
     return bestLayout;
   }
-  const fallbackProviderWidth = measureAdaptiveLabelTriggerWidth(normalizedProviderText, minFontSize, {
+  const rawProviderWidth = measureAdaptiveLabelTriggerWidth(normalizedProviderText, minFontSize, {
     fontWeight: 500,
     fontFamily: providerFontFamily,
   });
+  // 长供应商名称也要限宽，避免占满整行、挤掉模型入口。
+  const providerWidthBudget = normalizedModelText
+    ? Math.max(ADAPTIVE_PROVIDER_MIN_WIDTH, Math.floor((normalizedAvailableWidth - fixedWidth) * 0.4))
+    : Math.max(ADAPTIVE_PROVIDER_MIN_WIDTH, normalizedAvailableWidth - fixedWidth);
+  const fallbackProviderWidth = normalizedAvailableWidth > 0
+    ? Math.min(rawProviderWidth, providerWidthBudget)
+    : rawProviderWidth;
   const rawModelWidth = normalizedModelText
     ? measureAdaptiveLabelTriggerWidth(normalizedModelText, minFontSize, {
         fontWeight: 600,

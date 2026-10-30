@@ -27,6 +27,7 @@
 @import "./styles/components/bigscreen.css";
 @import "./styles/components/filemanager.css";
 @import "./styles/components/terminal.css";
+@import "./styles/components/ai-composer.css";
 
 /* Borderless visual system: surfaces, spacing, and shadows carry hierarchy. */
 :where(*, *::before, *::after) {

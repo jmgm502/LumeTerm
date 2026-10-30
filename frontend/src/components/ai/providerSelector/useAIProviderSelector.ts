@@ -80,8 +80,8 @@ export function useAIProviderSelector({
   const [quickModelError, setQuickModelError] = useState('');
   const [quickModelResolved, setQuickModelResolved] = useState(false);
   const [editingState, setEditingState] = useState<{ open: boolean; mode: 'create' | 'edit'; provider: AIProviderLike | null }>({ open: false, mode: 'edit', provider: null });
-  const [providerLabelFontSize, setProviderLabelFontSize] = useState(12);
-  const [modelLabelFontSize, setModelLabelFontSize] = useState(12);
+  const [providerLabelFontSize, setProviderLabelFontSize] = useState(13);
+  const [modelLabelFontSize, setModelLabelFontSize] = useState(13);
   const [providerTriggerWidth, setProviderTriggerWidth] = useState(0);
   const [modelTriggerWidth, setModelTriggerWidth] = useState(0);
   const [minSelectorWidth, setMinSelectorWidth] = useState(0);
@@ -216,7 +216,8 @@ export function useAIProviderSelector({
       providerFontFamily,
       modelFontFamily,
       fixedWidth: reasoningWidth - overlapWidth,
-      minFontSize: 11,
+      baseFontSize: 13,
+      minFontSize: 13,
     });
     setProviderLabelFontSize(layout.providerFontSize);
     setModelLabelFontSize(layout.modelFontSize);

@@ -56,78 +56,70 @@ export function AIComposerBottomBar({
   const { t } = useTranslation();
 
   return (
-    <div className="h-10 border-t border-line flex items-center gap-2.5 pl-3 pr-2.5 relative w-full min-w-0 max-w-full" style={{ zIndex: Z.PANEL_BUTTON }}>
-      <div className="flex items-center gap-2 flex-1 w-0 min-w-0 overflow-x-auto [scrollbar-width:none] py-1">
-        <AIProviderSelector
-          currentProviderId={currentProviderId}
-          onCurrentProviderChange={onCurrentProviderChange}
-          balanceRefreshSignal={providerBalanceRefreshSignal}
-          persistSelectedProviderId={persistProviderSelection}
-          dismissSignal={dismissSignal}
-        />
-        <AIAutoApproveDropdown
-          settings={autoApprovalSettings}
-          onPatchSettings={onPatchAutoApprovalSettings}
-          disabled={false}
-          dismissSignal={dismissSignal}
-        />
-        <AICollaborationPromptDropdown
-          open={collaborationPromptOpen && alwaysAllowAssistantCollaboration}
-          onOpenChange={setCollaborationPromptOpen}
-          extraPrompt={collaborationExtraPrompt}
-          onExtraPromptChange={onCollaborationExtraPromptChange}
-          presets={collaborationPromptPresets}
-          onPresetsChange={onCollaborationPromptPresetsChange}
-          anchorRef={collaborationToggleRef}
-          scopeIsTask={collaborationPromptScopeIsTask}
-          dismissSignal={dismissSignal}
-        />
-        <Tiptop text={t('建议长程任务开启')}>
-          <button
-            ref={collaborationToggleRef}
-            type="button"
-            aria-label={t('助理协同')}
-            aria-pressed={alwaysAllowAssistantCollaboration}
-            disabled={!canToggleAssistantCollaboration}
-            onClick={handleToggleAssistantCollaboration}
-            onContextMenu={(event) => {
-              event.preventDefault();
-              if (alwaysAllowAssistantCollaboration) {
-                setCollaborationPromptOpen((previous) => !previous);
-              }
-            }}
-            className={cn(
-              'h-7 inline-flex items-center gap-2 px-2.5 rounded-[var(--radius-sm)] border text-sm font-medium',
-              'transition-colors duration-[80ms] whitespace-nowrap',
-              'disabled:opacity-45 disabled:cursor-not-allowed disabled:pointer-events-none',
-              alwaysAllowAssistantCollaboration
-                ? 'border-accent-border bg-accent-dim text-primary cursor-pointer'
-                : 'border-line bg-transparent text-secondary cursor-pointer',
-            )}>
-            <span>{t('助理协同')}</span>
-            <Switch indicator checked={alwaysAllowAssistantCollaboration} size="sm" />
-          </button>
-        </Tiptop>
-        <Tiptop text={t('开启后对话仅在本次软件运行期间保留')}>
-          <button
-            type="button"
-            aria-label={t('临时会话')}
-            aria-pressed={temporarySessionEnabled}
-            disabled={typeof onTemporarySessionEnabledChange !== 'function'}
-            onClick={() => onTemporarySessionEnabledChange?.(!temporarySessionEnabled)}
-            className={cn(
-              'h-7 inline-flex items-center gap-2 px-2.5 rounded-[var(--radius-sm)] border text-sm font-medium',
-              'transition-colors duration-[80ms] whitespace-nowrap',
-              'disabled:opacity-45 disabled:cursor-not-allowed disabled:pointer-events-none',
-              temporarySessionEnabled
-                ? 'border-accent-border bg-accent-dim text-primary cursor-pointer'
-                : 'border-line bg-transparent text-secondary cursor-pointer',
-            )}>
-            <span>{t('临时会话')}</span>
-            <Switch indicator checked={temporarySessionEnabled} size="sm" />
-          </button>
-        </Tiptop>
+    <div className="ai-composer-bottom-bar" style={{ zIndex: Z.PANEL_BUTTON }}>
+      <div className="ai-composer-bottom-content">
+        <div className="ai-composer-provider-row">
+          <AIProviderSelector
+            currentProviderId={currentProviderId}
+            onCurrentProviderChange={onCurrentProviderChange}
+            balanceRefreshSignal={providerBalanceRefreshSignal}
+            persistSelectedProviderId={persistProviderSelection}
+            dismissSignal={dismissSignal}
+          />
+        </div>
+        <div className="ai-composer-session-options">
+          <AIAutoApproveDropdown
+            settings={autoApprovalSettings}
+            onPatchSettings={onPatchAutoApprovalSettings}
+            disabled={false}
+            dismissSignal={dismissSignal}
+          />
+          <Tiptop text={t('建议长程任务开启')} className="ai-composer-option-wrap">
+            <button
+              ref={collaborationToggleRef}
+              type="button"
+              aria-label={t('助理协同')}
+              aria-pressed={alwaysAllowAssistantCollaboration}
+              disabled={!canToggleAssistantCollaboration}
+              onClick={handleToggleAssistantCollaboration}
+              onContextMenu={(event) => {
+                event.preventDefault();
+                if (alwaysAllowAssistantCollaboration) {
+                  setCollaborationPromptOpen((previous) => !previous);
+                }
+              }}
+              className={cn('ai-composer-option', alwaysAllowAssistantCollaboration && 'is-active')}
+            >
+              <span>{t('助理协同')}</span>
+              <Switch indicator checked={alwaysAllowAssistantCollaboration} size="sm" />
+            </button>
+          </Tiptop>
+          <Tiptop text={t('开启后对话仅在本次软件运行期间保留')} className="ai-composer-option-wrap">
+            <button
+              type="button"
+              aria-label={t('临时会话')}
+              aria-pressed={temporarySessionEnabled}
+              disabled={typeof onTemporarySessionEnabledChange !== 'function'}
+              onClick={() => onTemporarySessionEnabledChange?.(!temporarySessionEnabled)}
+              className={cn('ai-composer-option', temporarySessionEnabled && 'is-active')}
+            >
+              <span>{t('临时会话')}</span>
+              <Switch indicator checked={temporarySessionEnabled} size="sm" />
+            </button>
+          </Tiptop>
+        </div>
       </div>
+      <AICollaborationPromptDropdown
+        open={collaborationPromptOpen && alwaysAllowAssistantCollaboration}
+        onOpenChange={setCollaborationPromptOpen}
+        extraPrompt={collaborationExtraPrompt}
+        onExtraPromptChange={onCollaborationExtraPromptChange}
+        presets={collaborationPromptPresets}
+        onPresetsChange={onCollaborationPromptPresetsChange}
+        anchorRef={collaborationToggleRef}
+        scopeIsTask={collaborationPromptScopeIsTask}
+        dismissSignal={dismissSignal}
+      />
     </div>
   );
 }

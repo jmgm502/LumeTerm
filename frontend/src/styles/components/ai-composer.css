@@ -1,0 +1,108 @@
+/* AI 输入区底栏：模型选择与会话选项分组，随面板宽度换行。 */
+.ai-composer-bottom-bar {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  container: ai-composer-options / inline-size;
+}
+
+.ai-composer-bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 10px;
+}
+
+.ai-composer-provider-row {
+  display: flex;
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.ai-composer-session-options {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ai-composer-option-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ai-composer-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  min-height: 32px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.ai-composer-option > span:first-of-type {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ai-composer-option:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.ai-composer-option.is-active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.ai-composer-option:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ai-provider-trigger {
+  justify-content: space-between;
+  min-height: 32px;
+  height: auto;
+  background: var(--surface-sunken);
+}
+
+.ai-provider-trigger:hover {
+  background: var(--surface-hover);
+}
+
+.ai-provider-trigger[aria-expanded='true'] {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.ai-provider-trigger svg {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+@container ai-composer-options (min-width: 720px) {
+  .ai-composer-provider-row {
+    flex: 1 1 300px;
+  }
+
+  .ai-composer-session-options {
+    flex: 0 1 auto;
+  }
+}

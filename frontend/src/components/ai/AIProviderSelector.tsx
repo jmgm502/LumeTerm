@@ -1,4 +1,6 @@
+import { ChevronDown } from 'lucide-react';
 import { Z } from '../../constants/zIndex.ts';
+import { useTranslation } from '../../i18n.ts';
 import AIProviderQuickEditOverlay from './AIProviderQuickEditOverlay.tsx';
 import type { AIProviderLike } from './providerSelector/providerSelectorTypes.ts';
 import { useAIProviderSelector } from './providerSelector/useAIProviderSelector.ts';
@@ -30,6 +32,7 @@ export default function AIProviderSelector({
   persistSelectedProviderId = true,
   dismissSignal = 0,
 }: AIProviderSelectorProps) {
+  const { t } = useTranslation();
   const {
     containerRef,
     providerLabelRef,
@@ -130,7 +133,10 @@ export default function AIProviderSelector({
             onMouseLeave={closeTooltip}
             onFocus={handleTriggerMouseEnter}
             onBlur={closeTooltip}
-            className={`h-7 inline-flex items-center gap-1.5 px-2.5 text-sm font-medium transition-colors duration-[80ms] whitespace-nowrap max-w-full min-w-[56px] shrink border ${
+            aria-label={t('供应商')}
+            aria-expanded={open}
+            title={providerTriggerText}
+            className={`ai-provider-trigger inline-flex items-center gap-1.5 px-2.5 text-sm font-medium transition-colors duration-[80ms] whitespace-nowrap max-w-full min-w-[56px] shrink border ${
               open ? 'bg-accent-dim border-accent-border' : 'bg-transparent border-line'
             }`}
             style={{
@@ -146,6 +152,7 @@ export default function AIProviderSelector({
             >
               {providerTriggerText}
             </span>
+            <ChevronDown size={12} aria-hidden="true" className={open ? 'rotate-180' : ''} />
           </button>
 
           {quickModelConfig.visible ? (
@@ -165,7 +172,10 @@ export default function AIProviderSelector({
                 onMouseLeave={closeTooltip}
                 onFocus={handleTriggerMouseEnter}
                 onBlur={closeTooltip}
-                className={`h-7 inline-flex items-center px-2.5 text-sm font-semibold transition-colors duration-[80ms] whitespace-nowrap min-w-0 max-w-full w-full overflow-hidden border ${
+                aria-label={t('模型')}
+                aria-expanded={modelMenuOpen}
+                title={quickModelConfig.currentLabel}
+                className={`ai-provider-trigger inline-flex items-center gap-1.5 px-2.5 text-sm font-semibold transition-colors duration-[80ms] whitespace-nowrap min-w-0 max-w-full w-full overflow-hidden border ${
                   modelMenuOpen
                     ? 'bg-accent-dim border-accent-border text-primary'
                     : 'bg-transparent border-line text-secondary'
@@ -179,6 +189,7 @@ export default function AIProviderSelector({
                 >
                   {quickModelConfig.currentLabel}
                 </span>
+                <ChevronDown size={12} aria-hidden="true" className={modelMenuOpen ? 'rotate-180' : ''} />
               </button>
               <AIProviderQuickModelMenu
                 modelMenuOpen={modelMenuOpen}
@@ -205,13 +216,17 @@ export default function AIProviderSelector({
                 onMouseLeave={closeTooltip}
                 onFocus={handleTriggerMouseEnter}
                 onBlur={closeTooltip}
-                className={`h-7 inline-flex items-center px-2.5 text-sm font-semibold transition-colors duration-[80ms] whitespace-nowrap border rounded-r-lg ${
+                aria-label={t('思考深度')}
+                aria-expanded={reasoningMenuOpen}
+                title={`${t('思考深度')}: ${quickReasoningConfig.currentLabel}`}
+                className={`ai-provider-trigger inline-flex items-center gap-1.5 px-2.5 text-sm font-semibold transition-colors duration-[80ms] whitespace-nowrap border rounded-r-lg ${
                   reasoningMenuOpen
                     ? 'bg-accent-dim border-accent-border text-primary'
                     : 'bg-transparent border-line text-secondary'
                 }`}
               >
                 <span>{quickReasoningConfig.currentLabel}</span>
+                <ChevronDown size={12} aria-hidden="true" className={reasoningMenuOpen ? 'rotate-180' : ''} />
               </button>
               <AIProviderQuickReasoningMenu
                 reasoningMenuOpen={reasoningMenuOpen}
